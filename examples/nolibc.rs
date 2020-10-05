@@ -1,6 +1,7 @@
 #![no_std]
 #![no_main]
 #![feature(panic_info_message)]
+#![feature(lang_items)]
 
 #[macro_use]
 extern crate memoffset;
@@ -120,6 +121,10 @@ fn __libc_start_main(_main: usize, _argc: isize, _argv: *const *const u8) -> isi
     example_main();
     exit(0);
 }
+
+// Not used for "panic = abort", but that setting isn't allowed when building tests
+#[lang = "eh_personality"]
+extern "C" fn eh_personality() {}
 
 // These are never called, but the startup code takes their address
 #[no_mangle] fn __libc_csu_init() {}
