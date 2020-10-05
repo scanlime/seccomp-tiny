@@ -5,3 +5,4 @@ Sometimes you need a syscall filter without an entire dynamic library. Or any dy
 
 It's just a basic seccomp thing that doesn't use libseccomp. Only tested on `x86_64` so far.
 
+The included example doesn't use the Rust standard library, the allocator, or any libc. Currently it compiles in release mode to 36 kB.
