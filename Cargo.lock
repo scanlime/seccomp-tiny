@@ -29,7 +29,7 @@ checksum = "176365c8253e381ad147774b6d9730a1b3fe2d7db498af521ed7d968674a55b3"
 
 [[package]]
 name = "seccomp-tiny"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "compiler_builtins",
  "memoffset",
