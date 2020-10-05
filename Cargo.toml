@@ -1,6 +1,9 @@
 [package]
 name = "seccomp-tiny"
 version = "0.1.0"
+description = "Linux seccomp library for no_std without libseccomp dependency"
+license = "Apache-2.0 OR MIT"
+repository = "https://github.com/scanlime/seccomp-tiny"
 authors = ["Micah Elizabeth Scott <micah@scanlime.org>"]
 edition = "2018"
 
